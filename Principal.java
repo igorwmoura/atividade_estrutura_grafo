@@ -5,34 +5,34 @@ import java.util.Scanner;
 
 
 public class Principal {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
-/*
-        meuGrafo.print(meuGrafo);
-        System.out.println();
-*/
+        Grafo grafoPrincipal = Principal.carregarArquivo("test.txt");
+        grafoPrincipal.print(grafoPrincipal);
+    }
 
-        try {
-            File myObj = new File("test.txt");
+    public static Grafo carregarArquivo(String arq)throws FileNotFoundException{
+            File myObj = new File(arq);
             Scanner myReader = new Scanner(myObj);
 
-            String data = myReader.nextLine();
-            System.out.println(data);
+            String firstLine = myReader.nextLine();
+            System.out.println(firstLine);
 
-            Grafo meuGrafo = new Grafo(Integer.parseInt(data));
+            Grafo meuGrafo = new Grafo(Integer.parseInt(firstLine));
 
-            meuGrafo.print(meuGrafo);
+//            int l = 0;
 
-            /*
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
+                data = data.strip();
+                String[] numeros = data.split("\t");
                 System.out.println(data);
-            }*/
-            myReader.close();
-        } catch (FileNotFoundException e) {
-            System.out.println("Error");
-            e.printStackTrace();
-        }
+                for (String numero : numeros) {
+                    System.out.println(numero);
+                }
+            }
 
+            myReader.close();
+            return meuGrafo;
     }
 }
