@@ -1,4 +1,7 @@
 package java_project;
+
+import java.util.Arrays;
+
 /**
  * Grafo
  */
@@ -22,10 +25,8 @@ public class Grafo {
 
         this.matrix = matrix;
 
-        /*
-        for(int k = 0; k < vertices; k++){
-            lista[k] = 0;
-        }*/
+        Arrays.fill(lista, 0);
+
         this.lista = lista;
     }
     
@@ -33,7 +34,7 @@ public class Grafo {
     public void print(Grafo graph){
         for(int i = 0; i < vertices; i++){
             for(int j = 0; j < vertices; j++){
-                System.out.print(graph.matrix[i][j]);
+                System.out.print(graph.matrix[i][j] + "\t");
             }
             System.out.println();
         }
@@ -41,7 +42,7 @@ public class Grafo {
         System.out.println();
 
         for(int k = 0; k < vertices; k++){
-            System.out.print(graph.lista[k]);
+            System.out.print(graph.lista[k]+ "\t");
         }
     }
 }
