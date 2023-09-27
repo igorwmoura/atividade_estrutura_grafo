@@ -6,8 +6,7 @@ import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) throws FileNotFoundException {
-
-        Grafo grafoPrincipal = Principal.carregarArquivo("test.txt");
+        Grafo grafoPrincipal = Principal.carregarArquivo("pcv4.txt");
         grafoPrincipal.print(grafoPrincipal);
     }
 
@@ -20,16 +19,26 @@ public class Principal {
 
             Grafo meuGrafo = new Grafo(Integer.parseInt(firstLine));
 
-//            int l = 0;
+            int linha = 0;
 
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 data = data.strip();
                 String[] numeros = data.split("\t");
-                System.out.println(data);
+                int coluna = 0;
+
+//                System.out.println(data);
                 for (String numero : numeros) {
-                    System.out.println(numero);
+                    if(coluna == meuGrafo.vertices){
+                        break;
+                    }
+                    meuGrafo.matrix[linha][coluna] = Integer.parseInt(numero);
+                    if(meuGrafo.matrix[linha][coluna] > 0){
+                        meuGrafo.lista.get(linha)[coluna] = coluna+1;
+                    }
+                    coluna += 1;
                 }
+                linha += 1;
             }
 
             myReader.close();

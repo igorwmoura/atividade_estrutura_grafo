@@ -1,5 +1,6 @@
 package java_project;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -8,26 +9,25 @@ import java.util.Arrays;
 public class Grafo {
     int vertices; //numero de vertices
     int[][] matrix; //representacao do grafo em matriz
-    int[] lista; //representacao do grafo em lista
+    ArrayList<int[]> lista; //representacao do grafo em lista
 
     //contrutores dos vertices, matriz e lista
     public Grafo(int vertices){
         
         this.vertices = vertices;
         int[][] matrix = new int[vertices][vertices];
-        int[] lista = new int[vertices];
+        lista = new ArrayList<>();
         
         for(int i = 0; i < vertices; i++){
             for(int j = 0; j < vertices; j++){
                 matrix[i][j] = 0;
             }
         }
-
         this.matrix = matrix;
 
-        Arrays.fill(lista, 0);
-
-        this.lista = lista;
+        for(int i = 0; i < vertices; i++){
+            lista.add(new int[vertices]);
+        }
     }
     
     //funcao para mostrar a matriz e a lista do grafo
@@ -41,8 +41,8 @@ public class Grafo {
 
         System.out.println();
 
-        for(int k = 0; k < vertices; k++){
-            System.out.print(graph.lista[k]+ "\t");
+        for(int[] i : graph.lista){
+            System.out.print(Arrays.toString(i));
         }
     }
 }
