@@ -4,20 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93291e89-a960-4a77-acfa-b107308a518a" name="Changes" comment="">
+    <list default="true" id="93291e89-a960-4a77-acfa-b107308a518a" name="Changes" comment="Leitura de arquivos e print das matrizes e listas concluídas(novo)">
       <change beforePath="$PROJECT_DIR$/Grafo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Grafo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_java/java_project/Grafo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_java/java_project/Grafo.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="e9964a30-a449-4423-a4fd-cc3c612d01e6" />
+        <option name="url" value="https://github.com/igorwmoura/atividade_estrutura_grafo.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Principal.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2Vue4YF0FKMsqJ2Sk3Om5nDu37h" />
   <component name="ProjectViewState">
@@ -29,7 +56,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/igorw/OneDrive/Documentos/meninoboto/estrutura_de_dados/projeto_java&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/igorw/OneDrive/Documentos/meninoboto/estrutura_de_dados/projeto_java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -41,6 +69,52 @@
       <option name="presentableId" value="Default" />
       <updated>1695690204031</updated>
     </task>
+    <task id="LOCAL-00001" summary="Commit teste">
+      <created>1695743305403</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695743305403</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Commit teste">
+      <created>1695778792277</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695778792277</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Leitura de arquivos e print das matrizes e listas concluídas">
+      <created>1695778871115</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695778871115</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Leitura de arquivos e print das matrizes e listas concluídas(novo)">
+      <created>1695779540627</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695779540627</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Leitura de arquivos e print das matrizes e listas concluídas(novo)">
+      <created>1695779554470</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695779554470</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit teste" />
+    <MESSAGE value="Leitura de arquivos e print das matrizes e listas concluídas" />
+    <MESSAGE value="Leitura de arquivos e print das matrizes e listas concluídas(novo)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Leitura de arquivos e print das matrizes e listas concluídas(novo)" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
