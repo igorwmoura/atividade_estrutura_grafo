@@ -34,7 +34,7 @@ public class Principal {
                     }
                     meuGrafo.matrix[linha][coluna] = Integer.parseInt(numero);
                     if(meuGrafo.matrix[linha][coluna] > 0){
-                        meuGrafo.lista.get(linha)[coluna] = coluna+1;
+                        meuGrafo.lista.get(linha).add(coluna+1);
                     }
                     coluna += 1;
                 }

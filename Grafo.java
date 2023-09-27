@@ -1,7 +1,7 @@
 package java_project;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.LinkedList;
 
 /**
  * Grafo
@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class Grafo {
     int vertices; //numero de vertices
     int[][] matrix; //representacao do grafo em matriz
-    ArrayList<int[]> lista; //representacao do grafo em lista
+    ArrayList<LinkedList<Integer>> lista; //representacao do grafo em lista
 
     //contrutores dos vertices, matriz e lista
     public Grafo(int vertices){
@@ -26,7 +26,7 @@ public class Grafo {
         this.matrix = matrix;
 
         for(int i = 0; i < vertices; i++){
-            lista.add(new int[vertices]);
+            lista.add(new LinkedList<>());
         }
     }
     
@@ -41,8 +41,8 @@ public class Grafo {
 
         System.out.println();
 
-        for(int[] i : graph.lista){
-            System.out.print(Arrays.toString(i));
+        for(LinkedList<Integer> i : graph.lista){
+            System.out.print(i);
         }
     }
 }
