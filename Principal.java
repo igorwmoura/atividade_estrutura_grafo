@@ -1,13 +1,14 @@
 package java_project;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 import java.util.Scanner;
-
 
 public class Principal {
     public static void main(String[] args) throws FileNotFoundException {
         Grafo grafoPrincipal = Principal.carregarArquivo("pcv4.txt");
         grafoPrincipal.print(grafoPrincipal);
+        System.out.println(Arrays.deepToString(grafoPrincipal.buscaEmLargura(grafoPrincipal, 3)));
     }
 
     public static Grafo carregarArquivo(String arq)throws FileNotFoundException{
@@ -34,7 +35,7 @@ public class Principal {
                     }
                     meuGrafo.matrix[linha][coluna] = Integer.parseInt(numero);
                     if(meuGrafo.matrix[linha][coluna] > 0){
-                        meuGrafo.lista.get(linha).add(coluna+1);
+                        meuGrafo.lista.get(linha).add(coluna);
                     }
                     coluna += 1;
                 }
@@ -44,4 +45,5 @@ public class Principal {
             myReader.close();
             return meuGrafo;
     }
+
 }
