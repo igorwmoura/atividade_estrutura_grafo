@@ -2,7 +2,6 @@ package java_project;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.ArrayList;
 
 /**
  * Grafo
@@ -17,7 +16,7 @@ public class Grafo {
         
         this.vertices = vertices;
         int[][] matrix = new int[vertices][vertices];
-        lista = new ArrayList<int[]>();
+        lista = new ArrayList<>();
         
         for(int i = 0; i < vertices; i++){
             for(int j = 0; j < vertices; j++){
