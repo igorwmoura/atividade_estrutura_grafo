@@ -28,9 +28,11 @@ public class Grafo {
         }
     }
     //busca em largura/extensao(BFS)
-    public int[][] buscaEmLargura(Grafo graph, int vertice){
+    public int[][] buscaEmLargura(Grafo graph, int vertice, int verticeAlvo){
         int[] distancia = new int[graph.vertices];
         int[] anterior = new int[graph.vertices];
+        LinkedList<Integer> caminho = new LinkedList<>();
+        int[] caminhoPercorrido;
         boolean[] foiVisitado = new boolean[graph.vertices];
 
         for(int i = 0; i < graph.vertices; i++){
@@ -48,6 +50,8 @@ public class Grafo {
             int p = minhaFila.poll();
             System.out.println("Vertice: " + p);
 
+            caminho.add(p);
+
             for(int l : graph.lista.get(p)){
                 if(!foiVisitado[l]){
                     distancia[l] = distancia[p]+1;
@@ -57,7 +61,19 @@ public class Grafo {
                 }
             }
         }
-        return new int[][] {distancia, anterior};
+        for(int j = caminho.size()-1; j >= 0; j--){
+            if(caminho.get(j) != verticeAlvo){
+                caminho.remove(j);
+            }else{
+                break;
+            }
+        }
+
+        caminhoPercorrido = new int[caminho.size()];
+        for (int i = 0; i < caminho.size(); i++) {
+            caminhoPercorrido[i] = caminho.get(i);
+        }
+        return new int[][] {distancia, anterior, caminhoPercorrido};
     }
 
     
@@ -72,9 +88,11 @@ public class Grafo {
 
         System.out.println();
 
+        System.out.println("Lista de adjacência: ");
         for(LinkedList<Integer> i : graph.lista){
             System.out.print(i);
         }
+        System.out.println();
         System.out.println();
     }
 }

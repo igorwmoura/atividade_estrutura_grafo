@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93291e89-a960-4a77-acfa-b107308a518a" name="Changes" comment="Leitura de arquivos e print das matrizes e listas concluídas(novo)">
+    <list default="true" id="93291e89-a960-4a77-acfa-b107308a518a" name="Changes" comment="Busca em largura implementada">
       <change beforePath="$PROJECT_DIR$/Grafo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Grafo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_java/java_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_java/java_project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/projeto_java/java_project/Grafo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_java/java_project/Grafo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_java/java_project/Principal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_java/java_project/Principal.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,14 +106,37 @@
       <option name="project" value="LOCAL" />
       <updated>1695779554470</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ArrayList de array de inteiros atualizado para ArrayList de LinkedList de inteiros">
+      <created>1695834501756</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695834501756</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ArrayList de array de inteiros atualizado para ArrayList de LinkedList de inteiros">
+      <created>1695834536389</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695834536389</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Busca em largura implementada">
+      <created>1695857839108</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695857839109</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit teste" />
     <MESSAGE value="Leitura de arquivos e print das matrizes e listas concluídas" />
     <MESSAGE value="Leitura de arquivos e print das matrizes e listas concluídas(novo)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Leitura de arquivos e print das matrizes e listas concluídas(novo)" />
+    <MESSAGE value="ArrayList de array de inteiros atualizado para ArrayList de LinkedList de inteiros" />
+    <MESSAGE value="Busca em largura implementada" />
+    <option name="LAST_COMMIT_MESSAGE" value="Busca em largura implementada" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

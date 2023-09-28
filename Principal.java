@@ -8,7 +8,19 @@ public class Principal {
     public static void main(String[] args) throws FileNotFoundException {
         Grafo grafoPrincipal = Principal.carregarArquivo("pcv4.txt");
         grafoPrincipal.print(grafoPrincipal);
-        System.out.println(Arrays.deepToString(grafoPrincipal.buscaEmLargura(grafoPrincipal, 3)));
+        int[][] distanciAnteriorCaminho = grafoPrincipal.buscaEmLargura(grafoPrincipal, 0, 1);
+        System.out.println();
+
+        System.out.println("Distância de cada elemento para o vértice: "
+                + Arrays.toString(distanciAnteriorCaminho[0]));
+
+        System.out.println("Anterior do vértice até cada elemento: "
+                + Arrays.toString(distanciAnteriorCaminho[1]));
+
+        if(distanciAnteriorCaminho[2].length == 0){
+            System.out.println("Não há caminho entre os vértices!");
+        }else{System.out.println("Caminho do vértice ate o vértice alvo escolhido: "
+                + Arrays.toString(distanciAnteriorCaminho[2]));}
     }
 
     public static Grafo carregarArquivo(String arq)throws FileNotFoundException{
@@ -16,6 +28,7 @@ public class Principal {
             Scanner myReader = new Scanner(myObj);
 
             String firstLine = myReader.nextLine();
+            System.out.println("Matriz de adjacência: ");
             System.out.println(firstLine);
 
             Grafo meuGrafo = new Grafo(Integer.parseInt(firstLine));
