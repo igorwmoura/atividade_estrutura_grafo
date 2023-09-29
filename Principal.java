@@ -6,9 +6,11 @@ import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) throws FileNotFoundException {
-        Grafo grafoPrincipal = Principal.carregarArquivo("pcv4.txt");
+        Grafo grafoPrincipal = Principal.carregarArquivo("pcv50.txt");
         grafoPrincipal.print(grafoPrincipal);
-        int[][] distanciAnteriorCaminho = grafoPrincipal.buscaEmLargura(grafoPrincipal, 0, 1);
+        int verticeEscolhido = 13;
+        int verticeAlvo = 49;
+        int[][] distanciAnteriorCaminho = grafoPrincipal.buscaEmLargura(grafoPrincipal, verticeEscolhido, verticeAlvo);
         System.out.println();
 
         System.out.println("Distância de cada elemento para o vértice: "
@@ -19,7 +21,7 @@ public class Principal {
 
         if(distanciAnteriorCaminho[2].length == 0){
             System.out.println("Não há caminho entre os vértices!");
-        }else{System.out.println("Caminho do vértice ate o vértice alvo escolhido: "
+        }else{System.out.println("Caminho do vértice "+ verticeEscolhido +" até o vértice " + verticeAlvo +":"
                 + Arrays.toString(distanciAnteriorCaminho[2]));}
     }
 
