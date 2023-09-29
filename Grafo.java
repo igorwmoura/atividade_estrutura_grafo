@@ -31,8 +31,6 @@ public class Grafo {
     public int[][] buscaEmLargura(Grafo graph, int vertice, int verticeAlvo){
         int[] distancia = new int[graph.vertices];
         int[] anterior = new int[graph.vertices];
-        LinkedList<Integer> caminho = new LinkedList<>();
-        int[] caminhoPercorrido;
         boolean[] foiVisitado = new boolean[graph.vertices];
 
         for(int i = 0; i < graph.vertices; i++){
@@ -50,8 +48,6 @@ public class Grafo {
             int p = minhaFila.poll();
             System.out.println("Vertice: " + p);
 
-            caminho.add(p);
-
             for(int l : graph.lista.get(p)){
                 if(!foiVisitado[l]){
                     distancia[l] = distancia[p]+1;
@@ -61,19 +57,19 @@ public class Grafo {
                 }
             }
         }
-        for(int j = caminho.size()-1; j >= 0; j--){
-            if(caminho.get(j) != verticeAlvo){
-                caminho.remove(j);
-            }else{
-                break;
+
+        LinkedList<Integer> caminho = new LinkedList<>();
+        int atual = verticeAlvo;
+        if(distancia[verticeAlvo] != -1){
+            while (atual != -1) {
+                caminho.addFirst(atual);
+                atual = anterior[atual];
             }
         }
 
-        caminhoPercorrido = new int[caminho.size()];
-        for (int i = 0; i < caminho.size(); i++) {
-            caminhoPercorrido[i] = caminho.get(i);
-        }
-        return new int[][] {distancia, anterior, caminhoPercorrido};
+        int[] caminhoPercorrido = caminho.stream().mapToInt(Integer::intValue).toArray();
+
+        return new int[][]{distancia, anterior, caminhoPercorrido};
     }
 
     
