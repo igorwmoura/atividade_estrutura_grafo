@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93291e89-a960-4a77-acfa-b107308a518a" name="Changes" comment="Busca em largura implementada">
-      <change beforePath="$PROJECT_DIR$/Grafo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Grafo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/Principal.java" afterDir="false" />
+    <list default="true" id="93291e89-a960-4a77-acfa-b107308a518a" name="Changes" comment="Aprimorado o cálculo do caminho entre os vértices selecionados para o percurso mínimo">
       <change beforePath="$PROJECT_DIR$/out/production/projeto_java/java_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_java/java_project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_java/java_project/Grafo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_java/java_project/Grafo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_java/java_project/Principal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_java/java_project/Principal.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +123,21 @@
       <option name="project" value="LOCAL" />
       <updated>1695857839109</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Adicionado um array que recebe o caminho percorrido de um vértice até outro predefinido">
+      <created>1695923489135</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1695923489135</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Aprimorado o cálculo do caminho entre os vértices selecionados para o percurso mínimo">
+      <created>1695947272571</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1695947272571</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -136,7 +146,9 @@
     <MESSAGE value="Leitura de arquivos e print das matrizes e listas concluídas(novo)" />
     <MESSAGE value="ArrayList de array de inteiros atualizado para ArrayList de LinkedList de inteiros" />
     <MESSAGE value="Busca em largura implementada" />
-    <option name="LAST_COMMIT_MESSAGE" value="Busca em largura implementada" />
+    <MESSAGE value="Adicionado um array que recebe o caminho percorrido de um vértice até outro predefinido" />
+    <MESSAGE value="Aprimorado o cálculo do caminho entre os vértices selecionados para o percurso mínimo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aprimorado o cálculo do caminho entre os vértices selecionados para o percurso mínimo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
