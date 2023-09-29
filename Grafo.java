@@ -72,6 +72,43 @@ public class Grafo {
         return new int[][]{distancia, anterior, caminhoPercorrido};
     }
 
+    /*
+    Busca em profundidade(DFS)
+    */
+    public LinkedList<Integer> buscaEmExtensao(Grafo graph, int vertice){
+        LinkedList<Integer> visitado = new LinkedList<>();
+        boolean[] marcado = new boolean[graph.vertices];
+        Stack<Integer> pilha = new Stack<>();
+        int vertInicial = vertice;
+        boolean contem = true;
+
+        pilha.add(vertice);
+        while(!(pilha.isEmpty())){
+            vertice = pilha.pop();
+            if(!marcado[vertice]){
+                visitado.add(vertice);
+                marcado[vertice] = true;
+                for(int i : graph.lista.get(vertice)){
+                    if(!marcado[i]){
+                        pilha.add(i);
+                    }
+                }
+            }
+        }
+
+        for(int i : graph.lista.get(vertInicial)){
+            if((i == vertInicial)){
+                contem = false;
+                break;
+            }
+        }
+        if (contem) visitado.remove();
+        //se encontrar -> NÃO REMOVA, else -> REMOVA
+        Collections.sort(visitado);
+
+        return visitado;
+    }
+
     
     //funcao para mostrar a matriz e a lista do grafo
     public void print(Grafo graph){

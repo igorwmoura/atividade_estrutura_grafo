@@ -6,10 +6,37 @@ import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) throws FileNotFoundException {
-        Grafo grafoPrincipal = Principal.carregarArquivo("pcv50.txt");
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("""
+                Escolha um dos arquivos a seguir que contém uma matriz de adjacência:
+                1)pcv4.txt
+                2)pcv10.txt
+                3)pcv50.txt
+                4)pcv177.txt
+                """);
+
+        char escolha = sc.next().charAt(0);
+        String arqEscolhido = null;
+
+        switch (escolha) {
+            case '1' -> arqEscolhido = "pcv4.txt";
+            case '2' -> arqEscolhido = "pcv10.txt";
+            case '3' -> arqEscolhido = "pcv50.txt";
+            case '4' -> arqEscolhido = "pcv177.txt";
+            default -> System.exit(0);
+        }
+
+        System.out.println("Escolha o vértice de origem: ");
+        int verticeEscolhido = sc.nextInt();
+
+        System.out.println("Escolha o vértice alvo para as buscas: ");
+        int verticeAlvo = sc.nextInt();
+
+
+        Grafo grafoPrincipal = Principal.carregarArquivo(arqEscolhido);
         grafoPrincipal.print(grafoPrincipal);
-        int verticeEscolhido = 13;
-        int verticeAlvo = 49;
         int[][] distanciAnteriorCaminho = grafoPrincipal.buscaEmLargura(grafoPrincipal, verticeEscolhido, verticeAlvo);
         System.out.println();
 
@@ -23,6 +50,11 @@ public class Principal {
             System.out.println("Não há caminho entre os vértices!");
         }else{System.out.println("Caminho do vértice "+ verticeEscolhido +" até o vértice " + verticeAlvo +":"
                 + Arrays.toString(distanciAnteriorCaminho[2]));}
+
+        System.out.println("Todos os elementos que as adjacências do vértice "+ verticeEscolhido +" se conectam: "
+                + grafoPrincipal.buscaEmExtensao(grafoPrincipal, verticeEscolhido));
+
+        sc.close();
     }
 
     public static Grafo carregarArquivo(String arq)throws FileNotFoundException{
