@@ -38,10 +38,15 @@ caminho entre os vértices” caso não haja o caminho.
 eliminar a recursão da implementação
 
 ## Arquivos testes
-Existem quatro arquivos .txt contendo as matrizes de adjacência.
+Existem quatro arquivos .txt contendo as matrizes de adjacência:
++ pcv4.txt
++ pcv10.txt
++ pcv50.txt
++ pcv177.txt
 
 Exemplo:
 ```
+//utilizando o arquivo "pcv4.txt"
 4
 0	3	4	0
 3	0	5	7
@@ -49,3 +54,33 @@ Exemplo:
 0	7	0	0
 ```
 Onde a primeira linha do arquivo contém o número de vértices contidos no grafo.
+É pedido um vértice de origem e um vértice alvo para as funções de busca.
+
+Usando '0' e '3' como exemplo para o arquivo "pcv4.txt", as saídas esperadas são:
+```
+//imprime a matriz
+Matriz de adjacência: 
+4
+0	3	4	0	
+3	0	5	7	
+4	5	0	0	
+0	7	0	0	
+
+//imprime a lista
+Lista de adjacência: 
+[1, 2][0, 2, 3][0, 1][1]
+
+//mostra os vértices visitados
+Vertice: 0
+Vertice: 1
+Vertice: 2
+Vertice: 3
+
+//busca em largura(bfs)
+Distância de cada elemento para o vértice: [0, 1, 1, 2]
+Anterior do vértice até cada elemento: [-1, 0, 0, 1]
+Caminho do vértice 0 até o vértice 3:[0, 1, 3]
+
+//busca em profundidade(dfs)
+Todos os elementos que as adjacências do vértice 0 se conectam: [1, 2, 3] //mostra todas as conexões em ordem crescente, para distinguir melhor quais vértices estão desconectados
+```
